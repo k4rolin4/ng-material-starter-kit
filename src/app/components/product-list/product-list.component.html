@@ -1,8 +1,4 @@
-<mat-card>
-  <mat-card-title>Product List</mat-card-title>
-  <mat-card-content>
-    <mat-list role="list" class="mat-elevation-z8">
-      <mat-list-item role="listitem" *ngFor="let item of list$ | async">{{item.title}} {{ item.price }}</mat-list-item>
-    </mat-list>
-  </mat-card-content>
-</mat-card>
+<ng-container *ngIf="details$ | async as item">{{ item }}</ng-container>
+<ng-container *ngIf="details$ | async as item">{{ item }}</ng-container>
+<mat-list role="list"><mat-list-item role="listitem" *ngFor="let item of list$ | async">{{ item | json }}</mat-list-item></mat-list>
+<mat-list role="list"><mat-list-item role="listitem" *ngFor="let item of list$ | async">{{ item }}</mat-list-item></mat-list>
