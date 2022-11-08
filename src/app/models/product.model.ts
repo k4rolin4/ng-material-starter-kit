@@ -6,3 +6,4 @@ export interface ProductModel {
   readonly description: string;
   readonly image: string;
 }
+
