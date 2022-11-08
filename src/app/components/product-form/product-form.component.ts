@@ -14,8 +14,8 @@ export class ProductFormComponent {
     title: new FormControl(),
     price: new FormControl(),
     description: new FormControl(),
+    image: new FormControl(),
     category: new FormControl(),
-    image: new FormControl()
   });
 
   constructor(private _productService: ProductService) {
@@ -24,10 +24,10 @@ export class ProductFormComponent {
   onProductFormSubmitted(productForm: FormGroup): void {
     this._productService.create({
       title: productForm.get('title')?.value,
-      category: productForm.get('category')?.value,
       price: productForm.get('price')?.value,
       description: productForm.get('description')?.value,
       image: productForm.get('image')?.value,
+      category: productForm.get('category')?.value,
     }).subscribe();
   }
 }
