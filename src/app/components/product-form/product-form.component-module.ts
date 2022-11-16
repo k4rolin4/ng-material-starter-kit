@@ -5,13 +5,23 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ProductFormComponent } from './product-form.component';
-import {MatCardModule} from "@angular/material/card";
+import { MatCardModule } from '@angular/material/card';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, CommonModule, MatButtonModule, MatCardModule],
+  imports: [
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CommonModule,
+    MatButtonModule,
+    MatCardModule,
+    MatOptionModule,
+    MatSelectModule,
+  ],
   declarations: [ProductFormComponent],
   providers: [],
-  exports: [ProductFormComponent]
+  exports: [ProductFormComponent],
 })
-export class ProductFormComponentModule {
-}
+export class ProductFormComponentModule {}

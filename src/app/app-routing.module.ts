@@ -8,6 +8,7 @@ import { PublicHolidaysListComponent } from './components/public-holidays-list/p
 import { CheckboxCategoriesListComponent } from './components/checkbox-categories-list/checkbox-categories-list.component';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -22,6 +23,8 @@ import { CheckboxCategoriesListComponentModule } from './components/checkbox-cat
 import { CategoriesMenuComponentModule } from './components/categories-menu/categories-menu.component-module';
 import { EmployeeFormComponentModule } from './components/employee-form/employee-form.component-module';
 import { EmployeeServiceModule } from './services/employee.service-module';
+import { LoginFormComponentModule } from './components/login-form/login-form.component-module';
+import { LoginServiceModule } from './services/login.service-module';
 
 @NgModule({
   imports: [
@@ -37,6 +40,7 @@ import { EmployeeServiceModule } from './services/employee.service-module';
       },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'create-employee', component: EmployeeFormComponent },
+      { path: 'login', component: LoginFormComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -52,6 +56,8 @@ import { EmployeeServiceModule } from './services/employee.service-module';
     CategoriesMenuComponentModule,
     EmployeeFormComponentModule,
     EmployeeServiceModule,
+    LoginFormComponentModule,
+    LoginServiceModule,
   ],
   exports: [RouterModule],
 })
