@@ -1,0 +1,8 @@
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let category of MenuCategories$ | async">
+    {{ category }}
+  </button>
+</mat-menu>
+
+
