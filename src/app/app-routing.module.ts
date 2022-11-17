@@ -9,6 +9,7 @@ import { CheckboxCategoriesListComponent } from './components/checkbox-categorie
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -25,6 +26,8 @@ import { EmployeeFormComponentModule } from './components/employee-form/employee
 import { EmployeeServiceModule } from './services/employee.service-module';
 import { LoginFormComponentModule } from './components/login-form/login-form.component-module';
 import { LoginServiceModule } from './services/login.service-module';
+import { RegisterFormComponentModule } from './components/register-form/register-form.component-module';
+import { UserServiceModule } from './services/user.service-module';
 
 @NgModule({
   imports: [
@@ -41,6 +44,7 @@ import { LoginServiceModule } from './services/login.service-module';
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'create-employee', component: EmployeeFormComponent },
       { path: 'login', component: LoginFormComponent },
+      { path: 'register', component: RegisterFormComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -58,6 +62,8 @@ import { LoginServiceModule } from './services/login.service-module';
     EmployeeServiceModule,
     LoginFormComponentModule,
     LoginServiceModule,
+    RegisterFormComponentModule,
+    UserServiceModule,
   ],
   exports: [RouterModule],
 })
