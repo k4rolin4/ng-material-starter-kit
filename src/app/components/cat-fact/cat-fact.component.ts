@@ -15,9 +15,7 @@ import { CatService } from '../../services/cat.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CatFactComponent {
-  readonly catFacts$: Observable<CatFactModel> = this._catService
-    .getOne(undefined)
-    .pipe(switchMap((data) => this._catService.getOne(undefined)));
+  readonly catFacts$: Observable<CatFactModel> = this._catService.getOne();
 
   constructor(private _catService: CatService) {}
 }
