@@ -11,6 +11,7 @@ import { EmployeeFormComponent } from './components/employee-form/employee-form.
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { CatFactComponent } from './components/cat-fact/cat-fact.component';
+import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -31,6 +32,8 @@ import { RegisterFormComponentModule } from './components/register-form/register
 import { UserServiceModule } from './services/user.service-module';
 import { CatFactComponentModule } from './components/cat-fact/cat-fact.component-module';
 import { CatServiceModule } from './services/cat.service-module';
+import { AgePredictionComponentModule } from './components/age-prediction/age-prediction.component-module';
+import { AgePredictionServiceModule } from './services/age-prediction.service-module';
 
 @NgModule({
   imports: [
@@ -49,6 +52,7 @@ import { CatServiceModule } from './services/cat.service-module';
       { path: 'login', component: LoginFormComponent },
       { path: 'register', component: RegisterFormComponent },
       { path: 'cat-fact', component: CatFactComponent },
+      { path: 'age/:name', component: AgePredictionComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -70,6 +74,8 @@ import { CatServiceModule } from './services/cat.service-module';
     UserServiceModule,
     CatFactComponentModule,
     CatServiceModule,
+    AgePredictionComponentModule,
+    AgePredictionServiceModule,
   ],
   exports: [RouterModule],
 })
