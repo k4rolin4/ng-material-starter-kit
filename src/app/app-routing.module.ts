@@ -12,6 +12,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { CatFactComponent } from './components/cat-fact/cat-fact.component';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -34,6 +35,8 @@ import { CatFactComponentModule } from './components/cat-fact/cat-fact.component
 import { CatServiceModule } from './services/cat.service-module';
 import { AgePredictionComponentModule } from './components/age-prediction/age-prediction.component-module';
 import { AgePredictionServiceModule } from './services/age-prediction.service-module';
+import { ProductDetailsComponentModule } from './components/product-details/product-details.component-module';
+import { ProductDetailsServiceModule } from './services/product-details.service-module';
 
 @NgModule({
   imports: [
@@ -53,6 +56,7 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
       { path: 'register', component: RegisterFormComponent },
       { path: 'cat-fact', component: CatFactComponent },
       { path: 'age/:name', component: AgePredictionComponent },
+      { path: 'product/:id', component: ProductDetailsComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -76,6 +80,8 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
     CatServiceModule,
     AgePredictionComponentModule,
     AgePredictionServiceModule,
+    ProductDetailsComponentModule,
+    ProductDetailsServiceModule,
   ],
   exports: [RouterModule],
 })
