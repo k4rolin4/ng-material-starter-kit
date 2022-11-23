@@ -9,7 +9,7 @@ export class AgePredictionService {
 
   getOne(name: string): Observable<AgePredictionModel> {
     return this._httpClient.get<AgePredictionModel>(
-      'https://api.agify.io/?name=karolina'
+      'https://api.agify.io/?name=' + name
     );
   }
 }
