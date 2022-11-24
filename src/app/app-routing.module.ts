@@ -14,6 +14,7 @@ import { CatFactComponent } from './components/cat-fact/cat-fact.component';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -40,6 +41,8 @@ import { ProductDetailsComponentModule } from './components/product-details/prod
 import { ProductDetailsServiceModule } from './services/product-details.service-module';
 import { CartDetailsComponentModule } from './components/cart-details/cart-details.component-module';
 import { CartDetailsServiceModule } from './services/cart-details.service-module';
+import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
+import { UserDetailsServiceModule } from './services/user-details.service-module';
 
 @NgModule({
   imports: [
@@ -61,6 +64,7 @@ import { CartDetailsServiceModule } from './services/cart-details.service-module
       { path: 'age/:name', component: AgePredictionComponent },
       { path: 'product/:id', component: ProductDetailsComponent },
       { path: 'cart/:id', component: CartDetailsComponent },
+      { path: 'user/:id', component: UserDetailsComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -88,6 +92,8 @@ import { CartDetailsServiceModule } from './services/cart-details.service-module
     ProductDetailsServiceModule,
     CartDetailsComponentModule,
     CartDetailsServiceModule,
+    UserDetailsComponentModule,
+    UserDetailsServiceModule,
   ],
   exports: [RouterModule],
 })

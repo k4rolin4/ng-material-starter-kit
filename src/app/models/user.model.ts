@@ -3,13 +3,15 @@ export interface UserModel {
   readonly email: string;
   readonly username: string;
   readonly password: string;
-  readonly firstname: string;
-  readonly lastname: string;
-  readonly city: string;
-  readonly street: string;
-  readonly number: number;
-  readonly zipcode: string;
-  readonly lat: string;
-  readonly long: string;
+  readonly name: {
+    firstname: string;
+    lastname: string;
+  };
+  readonly address: {
+    city: string;
+    street: string;
+    number: number;
+    zipcode: string;
+  };
   readonly phone: string;
 }

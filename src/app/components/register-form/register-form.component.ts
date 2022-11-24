@@ -24,8 +24,6 @@ export class RegisterFormComponent {
     street: new FormControl(),
     number: new FormControl(),
     zipcode: new FormControl(),
-    lat: new FormControl(),
-    long: new FormControl(),
     phone: new FormControl(),
   });
 
@@ -37,14 +35,16 @@ export class RegisterFormComponent {
         email: registerForm.get('email')?.value,
         username: registerForm.get('username')?.value,
         password: registerForm.get('password')?.value,
-        firstname: registerForm.get('firstname')?.value,
-        lastname: registerForm.get('lastname')?.value,
-        city: registerForm.get('city')?.value,
-        street: registerForm.get('street')?.value,
-        number: registerForm.get('number')?.value,
-        zipcode: registerForm.get('zipcode')?.value,
-        lat: registerForm.get('lat')?.value,
-        long: registerForm.get('long')?.value,
+        name: {
+          firstname: registerForm.get('lastname')?.value,
+          lastname: registerForm.get('lastname')?.value,
+        },
+        address: {
+          city: registerForm.get('city')?.value,
+          street: registerForm.get('street')?.value,
+          number: registerForm.get('number')?.value,
+          zipcode: registerForm.get('zipcode')?.value,
+        },
         phone: registerForm.get('phone')?.value,
       })
       .subscribe();
