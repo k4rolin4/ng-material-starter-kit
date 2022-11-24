@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ViewEncapsulation,
+} from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductModel } from '../../models/product.model';
 import { CategoriesService } from '../../services/categories.service';
@@ -8,11 +12,11 @@ import { CategoriesService } from '../../services/categories.service';
   styleUrls: ['./checkbox-categories-list.component.scss'],
   templateUrl: './checkbox-categories-list.component.html',
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CheckboxCategoriesListComponent {
-  readonly categoriesList$: Observable<ProductModel[]> = this._categoriesService.getAll();
+  readonly categoriesList$: Observable<ProductModel[]> =
+    this._categoriesService.getAll();
 
-  constructor(private _categoriesService: CategoriesService) {
-  }
+  constructor(private _categoriesService: CategoriesService) {}
 }

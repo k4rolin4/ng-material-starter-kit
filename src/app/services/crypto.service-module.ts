@@ -5,7 +5,6 @@ import { CryptoService } from './crypto.service';
   imports: [],
   declarations: [],
   providers: [CryptoService],
-  exports: []
+  exports: [],
 })
-export class CryptoServiceModule {
-}
+export class CryptoServiceModule {}

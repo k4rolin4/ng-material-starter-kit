@@ -5,7 +5,6 @@ import { ProductService } from './product.service';
   imports: [],
   declarations: [],
   providers: [ProductService],
-  exports: []
+  exports: [],
 })
-export class ProductServiceModule {
-}
+export class ProductServiceModule {}

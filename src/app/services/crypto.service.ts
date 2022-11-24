@@ -5,10 +5,11 @@ import { BinanceModel } from '../models/binance.model';
 
 @Injectable()
 export class CryptoService {
-  constructor(private _httpClient: HttpClient) {
-  }
+  constructor(private _httpClient: HttpClient) {}
 
   getAll(): Observable<BinanceModel[]> {
-    return this._httpClient.get<BinanceModel[]>('https://api2.binance.com/api/v3/ticker/24hr');
+    return this._httpClient.get<BinanceModel[]>(
+      'https://api2.binance.com/api/v3/ticker/24hr'
+    );
   }
 }

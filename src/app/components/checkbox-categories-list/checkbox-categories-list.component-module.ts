@@ -5,14 +5,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CheckboxCategoriesListComponent } from './checkbox-categories-list.component';
 
 @NgModule({
-  imports: [
-    MatCardModule,
-    MatCheckboxModule,
-    CommonModule
-  ],
+  imports: [MatCardModule, MatCheckboxModule, CommonModule],
   declarations: [CheckboxCategoriesListComponent],
   providers: [],
-  exports: [CheckboxCategoriesListComponent]
+  exports: [CheckboxCategoriesListComponent],
 })
-export class CheckboxCategoriesListComponentModule {
-}
+export class CheckboxCategoriesListComponentModule {}

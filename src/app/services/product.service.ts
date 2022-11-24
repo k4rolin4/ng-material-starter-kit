@@ -5,10 +5,12 @@ import { ProductModel } from '../models/product.model';
 
 @Injectable()
 export class ProductService {
-  constructor(private _httpClient: HttpClient) {
-  }
+  constructor(private _httpClient: HttpClient) {}
 
   create(product: Omit<ProductModel, 'id'>): Observable<ProductModel> {
-    return this._httpClient.post<ProductModel>('https://fakestoreapi.com/products', product);
+    return this._httpClient.post<ProductModel>(
+      'https://fakestoreapi.com/products',
+      product
+    );
   }
 }

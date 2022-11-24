@@ -10,10 +10,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProductListComponent } from './product-list.component';
 
 @NgModule({
-  imports: [MatCardModule, MatToolbarModule, MatListModule, CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [
+    MatCardModule,
+    MatToolbarModule,
+    MatListModule,
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+  ],
   declarations: [ProductListComponent],
   providers: [],
-  exports: [ProductListComponent]
+  exports: [ProductListComponent],
 })
-export class ProductListComponentModule {
-}
+export class ProductListComponentModule {}

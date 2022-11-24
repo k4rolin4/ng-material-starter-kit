@@ -2,10 +2,7 @@
   <mat-label>Choose an option</mat-label>
   <mat-select>
     <mat-option *ngFor="let holiday of HolidayList$ | async">
-      {{ holiday.localName}}
+      {{ holiday.localName }}
     </mat-option>
   </mat-select>
 </mat-form-field>
-
-
-
