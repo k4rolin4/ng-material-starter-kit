@@ -15,6 +15,7 @@ import { AgePredictionComponent } from './components/age-prediction/age-predicti
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { RandomActivitiesComponent } from './components/random-activities/random-activities.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -43,6 +44,8 @@ import { CartDetailsComponentModule } from './components/cart-details/cart-detai
 import { CartDetailsServiceModule } from './services/cart-details.service-module';
 import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
 import { UserDetailsServiceModule } from './services/user-details.service-module';
+import { RandomActivitiesComponentModule } from './components/random-activities/random-activities.component-module';
+import { BoredServiceModule } from './services/bored.service-module';
 
 @NgModule({
   imports: [
@@ -65,6 +68,7 @@ import { UserDetailsServiceModule } from './services/user-details.service-module
       { path: 'product/:id', component: ProductDetailsComponent },
       { path: 'cart/:id', component: CartDetailsComponent },
       { path: 'user/:id', component: UserDetailsComponent },
+      { path: 'random-activity', component: RandomActivitiesComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -94,6 +98,8 @@ import { UserDetailsServiceModule } from './services/user-details.service-module
     CartDetailsServiceModule,
     UserDetailsComponentModule,
     UserDetailsServiceModule,
+    RandomActivitiesComponentModule,
+    BoredServiceModule,
   ],
   exports: [RouterModule],
 })
