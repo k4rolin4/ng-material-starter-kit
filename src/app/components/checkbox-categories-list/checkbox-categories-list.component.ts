@@ -15,7 +15,7 @@ import { CategoriesService } from '../../services/categories.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CheckboxCategoriesListComponent {
-  readonly categoriesList$: Observable<ProductModel[]> =
+  readonly categoriesList$: Observable<string[]> =
     this._categoriesService.getAll();
 
   constructor(private _categoriesService: CategoriesService) {}

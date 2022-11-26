@@ -16,6 +16,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { RandomActivitiesComponent } from './components/random-activities/random-activities.component';
+import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -46,6 +47,7 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
 import { UserDetailsServiceModule } from './services/user-details.service-module';
 import { RandomActivitiesComponentModule } from './components/random-activities/random-activities.component-module';
 import { BoredServiceModule } from './services/bored.service-module';
+import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 
 @NgModule({
   imports: [
@@ -69,6 +71,7 @@ import { BoredServiceModule } from './services/bored.service-module';
       { path: 'cart/:id', component: CartDetailsComponent },
       { path: 'user/:id', component: UserDetailsComponent },
       { path: 'random-activity', component: RandomActivitiesComponent },
+      { path: 'products/:category', component: FilteredProductListComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -100,6 +103,7 @@ import { BoredServiceModule } from './services/bored.service-module';
     UserDetailsServiceModule,
     RandomActivitiesComponentModule,
     BoredServiceModule,
+    FilteredProductListComponentModule,
   ],
   exports: [RouterModule],
 })

@@ -7,8 +7,8 @@ import { ProductModel } from '../models/product.model';
 export class CategoriesService {
   constructor(private _httpClient: HttpClient) {}
 
-  getAll(): Observable<ProductModel[]> {
-    return this._httpClient.get<ProductModel[]>(
+  getAll(): Observable<string[]> {
+    return this._httpClient.get<string[]>(
       'https://fakestoreapi.com/products/categories'
     );
   }
