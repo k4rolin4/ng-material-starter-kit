@@ -18,6 +18,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { RandomActivitiesComponent } from './components/random-activities/random-activities.component';
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { FilteredProductListSubjectComponent } from './components/filtered-product-list-subject/filtered-product-list-subject.component';
+import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -50,6 +51,7 @@ import { RandomActivitiesComponentModule } from './components/random-activities/
 import { BoredServiceModule } from './services/bored.service-module';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 import { FilteredProductListSubjectComponentModule } from './components/filtered-product-list-subject/filtered-product-list-subject.component-module';
+import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
 
 @NgModule({
   imports: [
@@ -75,6 +77,7 @@ import { FilteredProductListSubjectComponentModule } from './components/filtered
       { path: 'random-activity', component: RandomActivitiesComponent },
       { path: 'products/:category', component: FilteredProductListComponent },
       { path: 'products', component: FilteredProductListSubjectComponent },
+      { path: 'sorted-products', component: SortedProductListComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -108,6 +111,7 @@ import { FilteredProductListSubjectComponentModule } from './components/filtered
     BoredServiceModule,
     FilteredProductListComponentModule,
     FilteredProductListSubjectComponentModule,
+    SortedProductListComponentModule,
   ],
   exports: [RouterModule],
 })
