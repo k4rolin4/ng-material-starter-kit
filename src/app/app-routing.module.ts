@@ -17,6 +17,7 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { RandomActivitiesComponent } from './components/random-activities/random-activities.component';
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
+import { FilteredProductListSubjectComponent } from './components/filtered-product-list-subject/filtered-product-list-subject.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -48,12 +49,13 @@ import { UserDetailsServiceModule } from './services/user-details.service-module
 import { RandomActivitiesComponentModule } from './components/random-activities/random-activities.component-module';
 import { BoredServiceModule } from './services/bored.service-module';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
+import { FilteredProductListSubjectComponentModule } from './components/filtered-product-list-subject/filtered-product-list-subject.component-module';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
       { path: 'create-product', component: ProductFormComponent },
-      { path: 'products', component: ProductListComponent },
+      { path: 'products-list', component: ProductListComponent },
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoListComponent },
       { path: 'public-holidays', component: PublicHolidaysListComponent },
@@ -72,6 +74,7 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
       { path: 'user/:id', component: UserDetailsComponent },
       { path: 'random-activity', component: RandomActivitiesComponent },
       { path: 'products/:category', component: FilteredProductListComponent },
+      { path: 'products', component: FilteredProductListSubjectComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -104,6 +107,7 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
     RandomActivitiesComponentModule,
     BoredServiceModule,
     FilteredProductListComponentModule,
+    FilteredProductListSubjectComponentModule,
   ],
   exports: [RouterModule],
 })

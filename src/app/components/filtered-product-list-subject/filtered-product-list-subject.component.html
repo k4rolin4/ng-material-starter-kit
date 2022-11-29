@@ -5,7 +5,8 @@
       <mat-list-option
         role="listoption"
         *ngFor="let category of categories$ | async"
-        [routerLink]="'/products/' + category"
+        [value]="category"
+        (click)="selectCategory(category)"
       >
         {{ category }}
       </mat-list-option>
@@ -17,8 +18,8 @@
   <mat-card-title>Products</mat-card-title>
   <mat-card-content>
     <mat-list role="list">
-      <mat-list-item role="listitem" *ngFor="let product of products$ | async"
-        >{{ product.title }} {{ product.price }}</mat-list-item
+      <mat-list-item role="listitem" *ngFor="let product of products$ | async">
+        {{ product.title }} {{ product.price }}</mat-list-item
       >
     </mat-list>
   </mat-card-content>
