@@ -19,6 +19,7 @@ import { RandomActivitiesComponent } from './components/random-activities/random
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { FilteredProductListSubjectComponent } from './components/filtered-product-list-subject/filtered-product-list-subject.component';
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
+import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -52,6 +53,7 @@ import { BoredServiceModule } from './services/bored.service-module';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 import { FilteredProductListSubjectComponentModule } from './components/filtered-product-list-subject/filtered-product-list-subject.component-module';
 import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
+import { EmployeesListComponentModule } from './components/employees-list/employees-list.component-module';
 
 @NgModule({
   imports: [
@@ -78,6 +80,7 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
       { path: 'products/:category', component: FilteredProductListComponent },
       { path: 'products', component: FilteredProductListSubjectComponent },
       { path: 'sorted-products', component: SortedProductListComponent },
+      { path: 'employees', component: EmployeesListComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -112,6 +115,7 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
     FilteredProductListComponentModule,
     FilteredProductListSubjectComponentModule,
     SortedProductListComponentModule,
+    EmployeesListComponentModule,
   ],
   exports: [RouterModule],
 })
