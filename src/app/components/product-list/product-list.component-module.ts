@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ProductListComponent } from './product-list.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { ProductListComponent } from './product-list.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatTableModule,
   ],
   declarations: [ProductListComponent],
   providers: [],
