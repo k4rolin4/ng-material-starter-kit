@@ -23,7 +23,6 @@ import { EmployeesListComponent } from './components/employees-list/employees-li
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
-import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
 import { CategoriesServiceModule } from './services/categories.service-module';
 import { CryptoListComponentModule } from './components/crypto-list/crypto-list.component-module';
@@ -43,7 +42,6 @@ import { CatServiceModule } from './services/cat.service-module';
 import { AgePredictionComponentModule } from './components/age-prediction/age-prediction.component-module';
 import { AgePredictionServiceModule } from './services/age-prediction.service-module';
 import { ProductDetailsComponentModule } from './components/product-details/product-details.component-module';
-import { ProductDetailsServiceModule } from './services/product-details.service-module';
 import { CartDetailsComponentModule } from './components/cart-details/cart-details.component-module';
 import { CartDetailsServiceModule } from './services/cart-details.service-module';
 import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
@@ -85,7 +83,7 @@ import { EmployeesListComponentModule } from './components/employees-list/employ
     ProductFormComponentModule,
     ProductServiceModule,
     ProductListComponentModule,
-    ProductsServiceModule,
+    ProductServiceModule,
     CategoriesListComponentModule,
     CategoriesServiceModule,
     CryptoListComponentModule,
@@ -105,7 +103,6 @@ import { EmployeesListComponentModule } from './components/employees-list/employ
     AgePredictionComponentModule,
     AgePredictionServiceModule,
     ProductDetailsComponentModule,
-    ProductDetailsServiceModule,
     CartDetailsComponentModule,
     CartDetailsServiceModule,
     UserDetailsComponentModule,

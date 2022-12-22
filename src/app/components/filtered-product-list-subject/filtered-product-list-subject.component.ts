@@ -7,7 +7,7 @@ import { Observable, Subject, combineLatest } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { ProductModel } from '../../models/product.model';
 import { CategoriesService } from '../../services/categories.service';
-import { ProductsService } from '../../services/products.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-filtered-product-list-subject',
@@ -30,7 +30,7 @@ export class FilteredProductListSubjectComponent {
 
   constructor(
     private _categoriesService: CategoriesService,
-    private _productsService: ProductsService
+    private _productsService: ProductService
   ) {}
 
   selectCategory(category: string): void {

@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { BehaviorSubject, Observable, of, combineLatest, map } from 'rxjs';
 import { ProductModel } from '../../models/product.model';
-import { ProductsService } from '../../services/products.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-sorted-product-list',
@@ -19,7 +19,7 @@ export class SortedProductListComponent {
   );
   public order$: Observable<string> = this._orderSubject.asObservable();
   readonly products$: Observable<ProductModel[]> = combineLatest([
-    this._productsService.getAll(),
+    this._productService.getAll(),
     this.order$,
   ]).pipe(
     map(([products, order]: [ProductModel[], string]) => {
@@ -33,7 +33,7 @@ export class SortedProductListComponent {
 
   public orders: Observable<string[]> = of(['asc', 'desc']);
 
-  constructor(private _productsService: ProductsService) {}
+  constructor(private _productService: ProductService) {}
 
   sort(order: string): void {
     this._orderSubject.next(order);

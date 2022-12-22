@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductModel } from '../../models/product.model';
-import { ProductsService } from '../../services/products.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -17,5 +17,5 @@ import { ProductsService } from '../../services/products.service';
 export class ProductListComponent {
   readonly list$: Observable<ProductModel[]> = this._productsService.getAll();
 
-  constructor(private _productsService: ProductsService) {}
+  constructor(private _productsService: ProductService) {}
 }

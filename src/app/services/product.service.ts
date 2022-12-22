@@ -7,6 +7,18 @@ import { ProductModel } from '../models/product.model';
 export class ProductService {
   constructor(private _httpClient: HttpClient) {}
 
+  getAll(): Observable<ProductModel[]> {
+    return this._httpClient.get<ProductModel[]>(
+      'https://fakestoreapi.com/products'
+    );
+  }
+
+  getOne(id: number): Observable<ProductModel> {
+    return this._httpClient.get<ProductModel>(
+      'https://fakestoreapi.com/products/' + id
+    );
+  }
+
   create(product: Omit<ProductModel, 'id'>): Observable<ProductModel> {
     return this._httpClient.post<ProductModel>(
       'https://fakestoreapi.com/products',
