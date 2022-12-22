@@ -20,6 +20,7 @@ import { FilteredProductListComponent } from './components/filtered-product-list
 import { FilteredProductListSubjectComponent } from './components/filtered-product-list-subject/filtered-product-list-subject.component';
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
+import { RefreshEmployeesComponent } from './components/refresh-employees/refresh-employees.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -52,6 +53,7 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
 import { FilteredProductListSubjectComponentModule } from './components/filtered-product-list-subject/filtered-product-list-subject.component-module';
 import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
 import { EmployeesListComponentModule } from './components/employees-list/employees-list.component-module';
+import { RefreshEmployeesComponentModule } from './components/refresh-employees/refresh-employees.component-module';
 
 @NgModule({
   imports: [
@@ -79,11 +81,11 @@ import { EmployeesListComponentModule } from './components/employees-list/employ
       { path: 'products', component: FilteredProductListSubjectComponent },
       { path: 'sorted-products', component: SortedProductListComponent },
       { path: 'employees', component: EmployeesListComponent },
+      { path: 'refresh-employees', component: RefreshEmployeesComponent },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
     ProductListComponentModule,
-    ProductServiceModule,
     CategoriesListComponentModule,
     CategoriesServiceModule,
     CryptoListComponentModule,
@@ -113,6 +115,7 @@ import { EmployeesListComponentModule } from './components/employees-list/employ
     FilteredProductListSubjectComponentModule,
     SortedProductListComponentModule,
     EmployeesListComponentModule,
+    RefreshEmployeesComponentModule,
   ],
   exports: [RouterModule],
 })
