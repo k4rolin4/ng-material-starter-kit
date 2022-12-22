@@ -18,7 +18,7 @@ import { ProductService } from '../../services/product.service';
 export class FilteredProductListComponent {
   readonly categories$: Observable<string[]> = this._categoriesService.getAll();
   readonly products$: Observable<ProductModel[]> = combineLatest([
-    this._productsService.getAll(),
+    this._productService.getAll(),
     this._activatedRoute.params,
   ]).pipe(
     map(([products, params]: [ProductModel[], Params]) => {
@@ -30,7 +30,7 @@ export class FilteredProductListComponent {
 
   constructor(
     private _categoriesService: CategoriesService,
-    private _productsService: ProductService,
+    private _productService: ProductService,
     private _activatedRoute: ActivatedRoute
   ) {}
 }

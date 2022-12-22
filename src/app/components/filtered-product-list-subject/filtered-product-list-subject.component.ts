@@ -4,7 +4,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { Observable, Subject, combineLatest } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { ProductModel } from '../../models/product.model';
 import { CategoriesService } from '../../services/categories.service';
 import { ProductService } from '../../services/product.service';
@@ -20,7 +20,7 @@ export class FilteredProductListSubjectComponent {
   private _categorySubject: Subject<string> = new Subject<string>();
   public category$: Observable<string> = this._categorySubject.asObservable();
   readonly products$: Observable<ProductModel[]> = combineLatest([
-    this._productsService.getAll(),
+    this._productService.getAll(),
     this.category$,
   ]).pipe(
     map(([products, category]: [ProductModel[], string]) => {
@@ -30,7 +30,7 @@ export class FilteredProductListSubjectComponent {
 
   constructor(
     private _categoriesService: CategoriesService,
-    private _productsService: ProductService
+    private _productService: ProductService
   ) {}
 
   selectCategory(category: string): void {
