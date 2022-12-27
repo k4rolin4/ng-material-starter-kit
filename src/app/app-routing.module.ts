@@ -21,6 +21,7 @@ import { FilteredProductListSubjectComponent } from './components/filtered-produ
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 import { RefreshEmployeesComponent } from './components/refresh-employees/refresh-employees.component';
+import { ProductMasterDetailsComponent } from './components/product-master-details/product-master-details.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -54,6 +55,7 @@ import { FilteredProductListSubjectComponentModule } from './components/filtered
 import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
 import { EmployeesListComponentModule } from './components/employees-list/employees-list.component-module';
 import { RefreshEmployeesComponentModule } from './components/refresh-employees/refresh-employees.component-module';
+import { ProductMasterDetailsComponentModule } from './components/product-master-details/product-master-details.component-module';
 
 @NgModule({
   imports: [
@@ -82,6 +84,10 @@ import { RefreshEmployeesComponentModule } from './components/refresh-employees/
       { path: 'sorted-products', component: SortedProductListComponent },
       { path: 'employees', component: EmployeesListComponent },
       { path: 'refresh-employees', component: RefreshEmployeesComponent },
+      {
+        path: 'products-master-details',
+        component: ProductMasterDetailsComponent,
+      },
     ]),
     ProductFormComponentModule,
     ProductServiceModule,
@@ -116,6 +122,7 @@ import { RefreshEmployeesComponentModule } from './components/refresh-employees/
     SortedProductListComponentModule,
     EmployeesListComponentModule,
     RefreshEmployeesComponentModule,
+    ProductMasterDetailsComponentModule,
   ],
   exports: [RouterModule],
 })
