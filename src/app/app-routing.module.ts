@@ -22,6 +22,7 @@ import { SortedProductListComponent } from './components/sorted-product-list/sor
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 import { RefreshEmployeesComponent } from './components/refresh-employees/refresh-employees.component';
 import { ProductMasterDetailsComponent } from './components/product-master-details/product-master-details.component';
+import { EmployeeMasterDetailsComponent } from './components/employee-master-details/employee-master-details.component';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
@@ -56,6 +57,7 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
 import { EmployeesListComponentModule } from './components/employees-list/employees-list.component-module';
 import { RefreshEmployeesComponentModule } from './components/refresh-employees/refresh-employees.component-module';
 import { ProductMasterDetailsComponentModule } from './components/product-master-details/product-master-details.component-module';
+import { EmployeeMasterDetailsComponentModule } from './components/employee-master-details/employee-master-details.component-module';
 
 @NgModule({
   imports: [
@@ -87,6 +89,10 @@ import { ProductMasterDetailsComponentModule } from './components/product-master
       {
         path: 'products-master-details',
         component: ProductMasterDetailsComponent,
+      },
+      {
+        path: 'employees-master-details',
+        component: EmployeeMasterDetailsComponent,
       },
     ]),
     ProductFormComponentModule,
@@ -123,6 +129,7 @@ import { ProductMasterDetailsComponentModule } from './components/product-master
     EmployeesListComponentModule,
     RefreshEmployeesComponentModule,
     ProductMasterDetailsComponentModule,
+    EmployeeMasterDetailsComponentModule,
   ],
   exports: [RouterModule],
 })

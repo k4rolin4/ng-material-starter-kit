@@ -26,7 +26,7 @@ export class RefreshEmployeesComponent {
 
   constructor(private _employeeService: EmployeeService) {}
 
-  delete(id: number): void {
+  delete(id: string): void {
     this._employeeService
       .delete(id)
       .subscribe(() => this._refreshSubject.next());
