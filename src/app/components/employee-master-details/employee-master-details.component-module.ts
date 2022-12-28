@@ -3,7 +3,7 @@ import { EmployeeMasterDetailsComponent } from './employee-master-details.compon
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-import { AsyncPipe, NgForOf } from '@angular/common';
+import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -12,6 +12,7 @@ import { AsyncPipe, NgForOf } from '@angular/common';
     MatButtonModule,
     NgForOf,
     AsyncPipe,
+    NgIf,
   ],
   declarations: [EmployeeMasterDetailsComponent],
   providers: [],
